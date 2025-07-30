@@ -1,7 +1,6 @@
 <script>
     import portfolioLogo from '../../../static/images/logo.svg';
     import { AlignJustify } from 'lucide-svelte';
-
 </script>
 
 <header class=" bg-primary flex justify-between items-center py-10 px-6 rounded-[20px] ">
