@@ -31,6 +31,22 @@
 
 }
 
+body {
+    background-color: var(--color-background);
+    font-family: var(--font-inter);
+    color: #000;
+}
+
+
+.container {
+    max-width: 1480px;
+    margin: 1.5em auto;
+
+    @media screen and (max-width: 48rem) {
+        max-width: 95%;
+    }
+}
+
 /* 
 * Backdround color: #F9F1F0
 * Primary color: #FADCD9
