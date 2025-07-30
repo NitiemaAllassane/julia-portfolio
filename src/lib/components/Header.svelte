@@ -1,6 +1,14 @@
 <script>
     import portfolioLogo from '../../../static/images/logo.svg';
     import { AlignJustify } from 'lucide-svelte';
+
+    import { mobileNav } from '$lib/global state/navbarState.svelte';
+	import MobileNav from './MobileNav.svelte';
+
+    function openMobileNav() {
+        if(mobileNav.isOpened) return;
+        mobileNav.isOpened = true;
+    }
 </script>
 
 <header class=" bg-primary flex justify-between items-center py-10 px-6 rounded-[20px] ">
@@ -16,7 +24,15 @@
             </ul>
         </nav>
 
-        <button class="text-2xl font-semi-bold md:hidden">
+        <!-- Open button -->
+        <button 
+            class="text-2xl font-semi-bold md:hidden"
+            onclick={openMobileNav}
+        >
             <AlignJustify />
         </button>
 </header>
+
+{#if mobileNav.isOpened}
+    <MobileNav />
+{/if}
